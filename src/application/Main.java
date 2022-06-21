@@ -14,6 +14,7 @@ public class Main extends Application {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("auth.fxml"));
 			Scene scene = new Scene(root,765,374);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
