@@ -1,11 +1,6 @@
 package application;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,18 +27,7 @@ public class AuthController {
 
     @FXML
     void SingIn(ActionEvent event) {
-    	 Connect con;	
-    	 ArrayList<Sotrudniki> users = new ArrayList<Sotrudniki>();
-   	        try (Connection connection = con.getConnection();
-   	             Statement statement = connection.createStatement();) {
-   	        	String selectSql = "SELECT * from ";
-   	            ResultSet rs1 = statement.executeQuery(selectSql);
-   	         while (rs1.next()) {
-                 users.add(new Sotrudniki());
-             }
-   	            } catch (SQLException e) {
-   	             System.out.println(e.getMessage());
-   	        }
+
  
     }	
 
