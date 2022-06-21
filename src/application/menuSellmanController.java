@@ -75,15 +75,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("addOrder.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+	        stage.setTitle("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ. пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("Ошибка");
-			alert.setHeaderText("Невозможно оформить заказ");
+	    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+			alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -98,15 +98,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("auth.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+	        stage.setTitle("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ. пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("Ошибка");
-			alert.setHeaderText("Невозможно завершить сессию");
+	    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+			alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -134,10 +134,10 @@ public class menuSellmanController {
             timeProkata.setCellValueFactory(new PropertyValueFactory<Order, Integer>("timeProkat"));
             Order.setItems(orders);
     } catch (SQLException e) {
-    	e.printStackTrace();
+    	 e.printStackTrace();
 		Alert alert = new Alert(AlertType.ERROR);
-    	alert.setTitle("Ошибка");
-		alert.setHeaderText("Невозможно отобразить заказы");
+    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+		alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		alert.setContentText(e.getMessage());
 		alert.showAndWait();
         }
