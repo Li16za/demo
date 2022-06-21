@@ -55,7 +55,7 @@ public class addOrderController {
 
     @FXML
     void AddOrder(ActionEvent event) {
-    	if (id.getText().isEmpty() || code.getText().isEmpty() || dateCreate.getText().isEmpty() || timeOrder.getText().isEmpty() 
+    	 if (id.getText().isEmpty() || code.getText().isEmpty() || dateCreate.getText().isEmpty() || timeOrder.getText().isEmpty() 
     	|| idClient.getText().isEmpty() || status.getText().isEmpty() || dateClose.getText().isEmpty() || timeProkata.getText().isEmpty() )	
     	{
     		Alert alert = new Alert(AlertType.ERROR);

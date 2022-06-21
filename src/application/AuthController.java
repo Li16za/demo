@@ -41,7 +41,7 @@ public class AuthController {
         try (Connection connection = connects.getConnection();
                 Statement statement = connection.createStatement();) {
             String selectSql1 = "SELECT role from sotrudniki where login = '" + login.getText() + "' and password = '"
-                    + password.getText() + "'";
+                + password.getText() + "'";
             ResultSet result = statement.executeQuery(selectSql1);
             result.next();
             Node source = (Node) event.getSource();
