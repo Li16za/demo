@@ -122,13 +122,13 @@ public class menuSellmanController {
             String selectSql = "SELECT * from prokat.order;";
             ResultSet result = statement.executeQuery(selectSql);
             while (result.next()) {
-            	orders.add(new Order(result.getInt(1), result.getString(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6),result.getDate(7),result.getInt(8)));
+            	orders.add(new Order(result.getInt(1), result.getString(2), result.getDate(3), result.getTime(4), result.getInt(5), result.getInt(6),result.getDate(7),result.getInt(8)));
             }
           //There's a bug somewhere, I don't know where
             id.setCellValueFactory(new PropertyValueFactory<Order, Integer>("id"));
             code.setCellValueFactory(new PropertyValueFactory<Order, String>("code"));
-            timeOrder.setCellValueFactory(new PropertyValueFactory<Order, Date>("orderTime"));
             dateCreate.setCellValueFactory(new PropertyValueFactory<Order, Date>("cretionDate"));
+            timeOrder.setCellValueFactory(new PropertyValueFactory<Order, Date>("orderTime"));
             idClient.setCellValueFactory(new PropertyValueFactory<Order, Integer>("idClient"));
             status.setCellValueFactory(new PropertyValueFactory<Order, Integer>("status"));
             dateClose.setCellValueFactory(new PropertyValueFactory<Order, Date>("closeDate"));
