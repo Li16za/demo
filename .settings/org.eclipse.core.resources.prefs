@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/application/AuthController.java=UTF-8
+encoding//src/application/AuthService.java=UTF-8
+encoding//src/application/OrderService.java=UTF-8
+encoding//src/application/menuSellmanController.java=UTF-8

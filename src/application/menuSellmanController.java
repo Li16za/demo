@@ -76,15 +76,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("addOrder.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ. пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ");
+	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
-			alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
+	    	alert.setTitle("ошибка");
+			alert.setHeaderText("оформить заказ временно недоступно, обратитесь к администратору с сообщением ниже");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}

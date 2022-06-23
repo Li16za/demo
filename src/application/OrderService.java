@@ -11,12 +11,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import application.db.*;
 
-public class addOrderController {
+public class OrderService {
 
     @FXML
     private ResourceBundle resources;
@@ -31,11 +32,8 @@ public class addOrderController {
     private TextField code;
 
     @FXML
-    private TextField dateClose;
-
-    @FXML
-    private TextField dateCreate;
-
+    private DatePicker dateClose;
+   
     @FXML
     private TextField id;
 
@@ -53,12 +51,16 @@ public class addOrderController {
 
     @FXML
     private TextField timeProkata;
+    
+    @FXML
+    private DatePicker dateCreate;
 
     @FXML
     void AddOrder(ActionEvent event) {
-    	 if (id.getText().isEmpty() || code.getText().isEmpty() || dateCreate.getText().isEmpty() || timeOrder.getText().isEmpty() 
-    	|| idClient.getText().isEmpty() || status.getText().isEmpty() || dateClose.getText().isEmpty() || timeProkata.getText().isEmpty() )	
+    	 if (id.getText().isEmpty() || code.getText().isEmpty() || dateCreate.getValue()== null  || timeOrder.getText().isEmpty() 
+    	|| idClient.getText().isEmpty() || status.getText().isEmpty() || dateClose.getValue()== null || timeProkata.getText().isEmpty() )	
     	{
+    		 System.out.println(dateCreate.getValue());
     		Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Ошибка");
 			alert.setHeaderText("Невозможно оформить заказ");
@@ -66,6 +68,8 @@ public class addOrderController {
 			alert.showAndWait();
     	}
     	else {	
+    		
+    		
     	String insertQuery = "INSERT INTO prokat.order "
     			+ "	(id,\n"
     			+ "    	code,\n"
@@ -78,13 +82,13 @@ public class addOrderController {
                 "values (\'" +
                 id.getText()+ "\', \'" +
                 code.getText()+ "\', \'" +
-                dateCreate.getText()+ "\', \'" +
+                dateCreate.getValue()+ "\', \'" +
                 timeOrder.getText()+ "\', \'" +
                 idClient.getText() + "\', \'" +
                 status.getText()+ "\', \'" +
-                dateClose.getText()+ "\', \'" +
+                dateClose.getValue()+ "\', \'" +
                 timeProkata.getText()+ "\');";
-        TransactionController.MakeTransaction(insertQuery);
+        TransactionController.makeTransaction(insertQuery);
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();
     	AnchorPane root;
