@@ -24,6 +24,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import application.db.*;
 
 public class menuSellmanController {
 
@@ -98,15 +99,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("auth.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ. пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ");
+	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
-			alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
+	    	alert.setTitle("ОШИБКА");
+			alert.setHeaderText("В данный момент не возможно сформирровать заказ");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
