@@ -60,9 +60,9 @@ public class addOrderController {
     	|| idClient.getText().isEmpty() || status.getText().isEmpty() || dateClose.getText().isEmpty() || timeProkata.getText().isEmpty() )	
     	{
     		Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("Ошибка");
-			alert.setHeaderText("Невозможно оформить заказ");
-			alert.setContentText("Проверьте правильность заполнения полей");
+			alert.setTitle("РћС€РёР±РєР°");
+			alert.setHeaderText("РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р·");
+			alert.setContentText("РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ Р·Р°РїРѕР»РЅРµРЅРёСЏ РїРѕР»РµР№");
 			alert.showAndWait();
     	}
     	else {	
@@ -92,15 +92,15 @@ public class addOrderController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("menuSellman.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+	        stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("Ошибка");
-			alert.setHeaderText("Невозможно оформить заказ");
+			alert.setTitle("РћС€РёР±РєР°");
+			alert.setHeaderText("РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р·");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -116,7 +116,7 @@ public class addOrderController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("auth.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+	        stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {

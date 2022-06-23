@@ -51,7 +51,7 @@ public class AuthController {
                 AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menuAdmin.fxml"));
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+                stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
                 stage.setResizable(true);
                 stage.show();
             }
@@ -59,7 +59,7 @@ public class AuthController {
                 AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menuSellman.fxml"));
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+                stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
                 stage.setResizable(true);
                 stage.show();
             }
@@ -67,24 +67,24 @@ public class AuthController {
                 AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menuShiftSupervisor.fxml"));
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
+                stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
                 stage.setResizable(true);
                 stage.show();
             }
             else {
             	Alert alert = new Alert(AlertType.ERROR);
-            	alert.setTitle("Ошибка");
-        		alert.setHeaderText("Невозможно авторизоваться");
-        		alert.setContentText("Проверьте правильность ввода логина и пароля");
+            	alert.setTitle("РћС€РёР±РєР°");
+        		alert.setHeaderText("РќРµРІРѕР·РјРѕР¶РЅРѕ Р°РІС‚РѕСЂРёР·РѕРІР°С‚СЊСЃСЏ");
+        		alert.setContentText("РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРѕРґР° Р»РѕРіРёРЅР° Рё РїР°СЂРѕР»СЏ");
         		alert.showAndWait();
             }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
             Alert alert = new Alert(AlertType.ERROR);
-        	alert.setTitle("Ошибка");
-    		alert.setHeaderText("Невозможно авторизоваться");
-    		alert.setContentText("Проверьте правильность ввода логина и пароля");
+        	alert.setTitle("РћС€РёР±РєР°");
+    		alert.setHeaderText("РќРµРІРѕР·РјРѕР¶РЅРѕ Р°РІС‚РѕСЂРёР·РѕРІР°С‚СЊСЃСЏ");
+    		alert.setContentText("РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРѕРґР° Р»РѕРіРёРЅР° Рё РїР°СЂРѕР»СЏ");
     		alert.showAndWait();
         }
     }

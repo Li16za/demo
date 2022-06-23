@@ -76,15 +76,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("addOrder.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("����� ������� ����� ��. �.�. ������");
+	        stage.setTitle("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ. пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("������");
-			alert.setHeaderText("���������� �������� �����");
+	    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+			alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -99,15 +99,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("auth.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("����� ������� ����� ��. �.�. ������");
+	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("������");
-			alert.setHeaderText("� ������ ������ �� �������� ������������� �����");
+	    	alert.setTitle("ОШИБКА");
+			alert.setHeaderText("В данный момент не возможно сформирровать заказ");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -137,8 +137,8 @@ public class menuSellmanController {
     } catch (SQLException e) {
     	 e.printStackTrace();
 		Alert alert = new Alert(AlertType.ERROR);
-    	alert.setTitle("������");
-		alert.setHeaderText("���������� ���������� ������");
+    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+		alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		alert.setContentText(e.getMessage());
 		alert.showAndWait();
         }
