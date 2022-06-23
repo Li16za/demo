@@ -1,17 +1,18 @@
 package application;
 
+import java.sql.Time;
 import java.util.Date;
 
 public class Order {
 	private int id;
 	private String code;
-	private Date orderTime;
 	private Date cretionDate;
+	private Time orderTime;
 	private int idClient;
 	private int status;
 	private Date closeDate;
 	private int timeProkat;
-	public Order(int id, String code, Date orderTime, Date cretionDate, int idClient, int status, Date closeDate,
+	public Order(int id, String code,  Date cretionDate, Time orderTime,int idClient, int status, Date closeDate,
 			int timeProkat) {
 		super();
 		this.id = id;
@@ -38,7 +39,7 @@ public class Order {
 	public Date getOrderTime() {
 		return orderTime;
 	}
-	public void setOrderTime(Date orderTime) {
+	public void setOrderTime(Time orderTime) {
 		this.orderTime = orderTime;
 	}
 	public Date getCretionDate() {
