@@ -42,7 +42,7 @@
             <Font name="Comic Sans MS" size="24.0" />
          </font>
       </TextField>
-      <TextField fx:id="code" layoutX="554.0" layoutY="88.0" prefHeight="51.0" prefWidth="374.0">
+      <TextField fx:id="code" layoutX="554.0" layoutY="88.0" prefHeight="51.0" prefWidth="374.0" promptText="id/dd.MM.yyyy">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>

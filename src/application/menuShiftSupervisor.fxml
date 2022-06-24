@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="400.0" maxWidth="800.0" minHeight="200.0" minWidth="600.0" prefHeight="374.0" prefWidth="765.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="495.0" maxWidth="943.0" minHeight="200.0" minWidth="600.0" prefHeight="495.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.shiftSupervisorController">
+   <children>
+      <Label prefHeight="82.0" prefWidth="943.0" style="-fx-background-color: RGB(118, 227, 131);" />
+      <Button fx:id="singOut" alignment="CENTER" contentDisplay="CENTER" layoutX="821.0" layoutY="429.0" mnemonicParsing="false" onAction="#SingOut" style="-fx-background-color: RGB(118, 227, 131);" text="Выйти">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
+      <TableView fx:id="Order" layoutX="18.0" layoutY="98.0" prefHeight="318.0" prefWidth="907.0" style="-fx-background-color: white;">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="56.000030517578125" style="-fx-background-color: RGB(118, 227, 131);" text="ID " />
+            <TableColumn fx:id="code" prefWidth="70.39993286132812" style="-fx-background-color: RGB(118, 227, 131);" text="Код" />
+            <TableColumn fx:id="dateCreate" prefWidth="90.4000244140625" style="-fx-background-color: RGB(118, 227, 131);" text="Дата создания" />
+            <TableColumn fx:id="timeOrder" minWidth="0.0" prefWidth="92.7999267578125" style="-fx-background-color: RGB(118, 227, 131);" text="Время заказа" />
+            <TableColumn fx:id="idClient" prefWidth="187.20001220703125" style="-fx-background-color: RGB(118, 227, 131);" text="ID клиента" />
+            <TableColumn fx:id="status" prefWidth="124.79998779296875" style="-fx-background-color: RGB(118, 227, 131);" text="Статус" />
+            <TableColumn fx:id="dateClose" prefWidth="174.4000244140625" style="-fx-background-color: RGB(118, 227, 131);" text="Дата закрытия" />
+            <TableColumn fx:id="timeProkata" prefWidth="104.7999267578125" style="-fx-background-color: RGB(118, 227, 131);" text="Время проката" />
+         </columns>
+      </TableView>
+      <Label contentDisplay="CENTER" layoutX="120.0" layoutY="3.0" prefHeight="82.0" prefWidth="646.0" text="Точка проката ЦПКиО им. С.М. Кирова" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="82.0" fitWidth="115.0" layoutX="23.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resourse/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="AddOrder" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="429.0" mnemonicParsing="false" onAction="#AddOrder" prefHeight="51.0" prefWidth="269.0" style="-fx-background-color: RGB(118, 227, 131);" text="Сформировать заказ" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

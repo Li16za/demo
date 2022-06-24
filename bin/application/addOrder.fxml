@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="495.0" maxWidth="943.0" minHeight="200.0" minWidth="600.0" prefHeight="495.0" prefWidth="943.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.addOrderController">
+<AnchorPane maxHeight="495.0" maxWidth="943.0" minHeight="200.0" minWidth="600.0" prefHeight="495.0" prefWidth="943.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderService">
    <children>
       <Label prefHeight="82.0" prefWidth="943.0" style="-fx-background-color: RGB(118, 227, 131);" />
       <Button fx:id="singOut" alignment="CENTER" contentDisplay="CENTER" layoutX="821.0" layoutY="429.0" mnemonicParsing="false" onAction="#SingOut" style="-fx-background-color: RGB(118, 227, 131);" text="Выйти">

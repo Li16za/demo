@@ -2,7 +2,15 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Date;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +18,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -131,6 +140,25 @@ public class OrderService {
 
     @FXML
     void initialize() {
+    	Connect connects = new Connect();
+        try (Connection connection1 = connects.getConnection();
+             Statement statement = connection1.createStatement();) {
+            String selectSql = "SELECT id from prokat.order order by id ;";
+            ResultSet result = statement.executeQuery(selectSql);
+            Integer n =0;
+            while (result.next()) {
+            	 n = result.getInt(1)+1;
+            }
+            id.setPromptText(n.toString());
+            
+    } catch (SQLException e) {
+    	 e.printStackTrace();
+		Alert alert = new Alert(AlertType.ERROR);
+    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+		alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
+		alert.setContentText(e.getMessage());
+		alert.showAndWait();
+        }
         assert AddOrder != null : "fx:id=\"AddOrder\" was not injected: check your FXML file 'addOrder.fxml'.";
         assert code != null : "fx:id=\"code\" was not injected: check your FXML file 'addOrder.fxml'.";
         assert dateClose != null : "fx:id=\"dateClose\" was not injected: check your FXML file 'addOrder.fxml'.";
