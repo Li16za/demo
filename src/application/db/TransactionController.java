@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class TransactionController {
 	static Connect connects = new Connect();
-	 public static void MakeTransaction ( String SqlStatement) {
+	 public static void makeTransaction ( String SqlStatement) {
 	        try (Connection connection = connects.getConnection();
 	             Statement statement = connection.createStatement();) {
 	            statement.executeUpdate(SqlStatement);

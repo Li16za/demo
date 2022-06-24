@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import application.db.Connect;
+import application.db.TransactionController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,15 +20,16 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import application.db.*;
 
-public class menuSellmanController {
+public class shiftSupervisorController {
 
     @FXML
     private ResourceBundle resources;
@@ -76,15 +79,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("addOrder.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
+	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("РѕС€РёР±РєР°");
-			alert.setHeaderText("РѕС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р· РІСЂРµРјРµРЅРЅРѕ РЅРµРґРѕСЃС‚СѓРїРЅРѕ, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ СЃ СЃРѕРѕР±С‰РµРЅРёРµРј РЅРёР¶Рµ");
+	    	alert.setTitle("ошибка");
+			alert.setHeaderText("оформить заказ временно недоступно, обратитесь к администратору с сообщением ниже");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -99,15 +102,15 @@ public class menuSellmanController {
 			root = (AnchorPane) FXMLLoader.load(getClass().getResource("auth.fxml"));
 			Scene scene = new Scene(root);
 	        stage.setScene(scene);
-	        stage.setTitle("С‚РѕС‡РєР° РїСЂРѕРєР°С‚Р° Р¦РџРљРёРћ РёРј. РЎ.Рњ. РљРёСЂРѕРІР°");
+	        stage.setTitle("точка проката ЦПКиО им. С.М. Кирова");
 	        stage.setResizable(true);
 	        stage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Alert alert = new Alert(AlertType.ERROR);
-	    	alert.setTitle("РћРЁРР‘РљРђ");
-			alert.setHeaderText("Р’ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ РЅРµ РІРѕР·РјРѕР¶РЅРѕ СЃС„РѕСЂРјРёСЂСЂРѕРІР°С‚СЊ Р·Р°РєР°Р·");
+	    	alert.setTitle("ОШИБКА");
+			alert.setHeaderText("В данный момент не возможно сформирровать заказ");
 			alert.setContentText(e.getMessage());
 			alert.showAndWait();
 		}
@@ -124,6 +127,7 @@ public class menuSellmanController {
             while (result.next()) {
             	orders.add(new Order(result.getInt(1), result.getString(2), result.getDate(3), result.getTime(4), result.getInt(5), result.getInt(6),result.getDate(7),result.getInt(8)));
             }
+          //There's a bug somewhere, I don't know where
             id.setCellValueFactory(new PropertyValueFactory<Order, Integer>("id"));
             code.setCellValueFactory(new PropertyValueFactory<Order, String>("code"));
             dateCreate.setCellValueFactory(new PropertyValueFactory<Order, Date>("cretionDate"));
@@ -136,8 +140,8 @@ public class menuSellmanController {
     } catch (SQLException e) {
     	 e.printStackTrace();
 		Alert alert = new Alert(AlertType.ERROR);
-    	alert.setTitle("РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…");
-		alert.setHeaderText("РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р… РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р… РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…РїС—Р…");
+    	alert.setTitle("пїЅпїЅпїЅпїЅпїЅпїЅ");
+		alert.setHeaderText("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		alert.setContentText(e.getMessage());
 		alert.showAndWait();
         }
@@ -153,5 +157,4 @@ public class menuSellmanController {
         assert timeProkata != null : "fx:id=\"timeProkata\" was not injected: check your FXML file 'menuSellman.fxml'.";
 
     }
-
 }

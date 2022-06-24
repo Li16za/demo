@@ -19,7 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import application.db.*;
 
-public class AuthController {
+public class AuthService {
 
     @FXML
     private ResourceBundle resources;
